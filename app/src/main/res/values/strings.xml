@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Componentes</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab1">Chamada</string>
+    <string name="tab2">Cadastro</string>
+    <string name="tab3">Resumo</string>
+</resources>

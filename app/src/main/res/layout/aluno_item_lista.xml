@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLista"
+    android:layout_width="match_parent"
+    android:layout_height="78dp"
+    android:minHeight="78dp">
+
+    <TextView
+        android:id="@+id/textIcon"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        tools:text="F"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+
+
+        android:gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/circle_text_icon_list"/>
+
+    <TextView
+        android:id="@+id/textNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Joel Jhimmy Ramos Libório"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/textIcon"
+        android:layout_alignTop="@+id/textIcon"
+        android:layout_toStartOf="@+id/textData"/>
+
+    <TextView
+        android:id="@+id/textClasse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Facebook"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+
+        android:layout_marginStart="16dp"
+        android:layout_below="@+id/textNome"
+        android:layout_toEndOf="@+id/textIcon"
+        android:layout_toStartOf="@+id/textData"/>
+
+    <TextView
+        android:id="@+id/textData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="30 nov"
+        android:ellipsize="marquee"
+        android:textSize="12sp"
+        android:typeface="monospace"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/textIcon"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@+id/textIcon"
+        android:layout_below="@+id/textClasse"
+        android:background="?android:attr/listDivider"/>
+
+</RelativeLayout>
+
+
+

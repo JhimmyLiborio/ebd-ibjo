@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragmentLayoutChamada"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#052836"
+    tools:context=".FragmentChamada">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/aluno_item_lista"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        app:rippleColor="@android:color/darker_gray"
+        app:backgroundTint="@android:color/holo_blue_bright"
+        android:src="@drawable/round_verified_white_36dp"
+        tools:ignore="ContentDescription"
+        app:fabSize="auto"/>
+
+
+</RelativeLayout>
