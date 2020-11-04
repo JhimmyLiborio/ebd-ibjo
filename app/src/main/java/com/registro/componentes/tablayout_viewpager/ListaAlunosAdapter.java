@@ -47,9 +47,9 @@ public class ListaAlunosAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         itemHolder.textClasse.setText(listaAluno.get(position).getClasse());
 
         // set Color
-        itemHolder.textNome.setTextColor( Color.WHITE );
+        //itemHolder.textNome.setTextColor(Color.WHITE);
         itemHolder.textClasse.setTextColor( Color.LTGRAY );
-        itemHolder.textData.setTextColor(Color.LTGRAY);
+        //itemHolder.textData.setTextColor(Color.LTGRAY);
     }
 
     // Tamanho da fonte de Dados
