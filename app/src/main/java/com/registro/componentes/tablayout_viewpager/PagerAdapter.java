@@ -11,21 +11,21 @@ import androidx.fragment.app.FragmentPagerAdapter;
 public class PagerAdapter extends FragmentPagerAdapter {
 
 
-    private  int numeroDeTabs;
+    private  final int  numeroDeTabs;
 
-
-   /* PagerAdapter(@NonNull FragmentManager fm, int behavior) {
+   PagerAdapter(@NonNull FragmentManager fm, int behavior) {
         super( fm, behavior );
         this.numeroDeTabs = behavior;
-    }*/
-
-
-    public PagerAdapter(@NonNull FragmentManager fm, int  numeroDeTabs) {
-        super( fm );
-        this.numeroDeTabs = numeroDeTabs;
     }
 
 
+    /*public PagerAdapter(@NonNull FragmentManager fm, int  numeroDeTabs) {
+        super( fm );
+        this.numeroDeTabs = numeroDeTabs;
+    }*/
+
+
+    @NonNull
     @Override
     public Fragment getItem(int position) {
 
