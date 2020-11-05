@@ -9,6 +9,8 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
 
+
+        //Recupera uma instancia do Banco de Dados
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+        DatabaseReference minhaReferencia =  database.getReference("pessoas");
+        Log.d("REFERENCIA BANCO", minhaReferencia.getDatabase().toString());
 
         // referência UI Elementos
         tabLayout = findViewById( R.id.tabLayout );
