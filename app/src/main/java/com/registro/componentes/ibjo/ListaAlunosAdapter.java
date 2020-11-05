@@ -1,4 +1,4 @@
-package com.registro.componentes.tablayout_viewpager;
+package com.registro.componentes.ibjo;
 
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.registro.componentes.tablayout_viewpager.entidade.Aluno;
+import com.registro.componentes.ibjo.entidade.Aluno;
 
 import java.util.List;
 

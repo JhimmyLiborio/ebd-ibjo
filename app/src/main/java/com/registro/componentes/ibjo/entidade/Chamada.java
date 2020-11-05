@@ -1,4 +1,4 @@
-package com.registro.componentes.tablayout_viewpager.entidade;
+package com.registro.componentes.ibjo.entidade;
 
 import java.util.List;
 

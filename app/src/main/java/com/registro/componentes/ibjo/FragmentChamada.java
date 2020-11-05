@@ -1,4 +1,4 @@
-package com.registro.componentes.tablayout_viewpager;
+package com.registro.componentes.ibjo;
 
 
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.registro.componentes.tablayout_viewpager.entidade.Aluno;
+import com.registro.componentes.ibjo.entidade.Aluno;
 
 import java.util.ArrayList;
 import java.util.List;

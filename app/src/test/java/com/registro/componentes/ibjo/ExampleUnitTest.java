@@ -1,4 +1,4 @@
-package com.registro.componentes.tablayout_viewpager;
+package com.registro.componentes.ibjo;
 
 import org.junit.Test;
 
