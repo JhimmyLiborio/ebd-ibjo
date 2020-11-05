@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "882660954478",
+    "firebase_url": "https://ibjo-ebd.firebaseio.com",
+    "project_id": "ibjo-ebd",
+    "storage_bucket": "ibjo-ebd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882660954478:android:143faac4ba6aa7a97db17f",
+        "android_client_info": {
+          "package_name": "com.registro.componentes.ibjo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882660954478-kv8khrm460d06mf125epu3t074at3dqa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEn7iPX3ggqRT8mLRRwShHGDNU5f-3Yo8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882660954478-kv8khrm460d06mf125epu3t074at3dqa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882660954478:android:a4fb2215aec8eb6f7db17f",
+        "android_client_info": {
+          "package_name": "com.registro.ibjoebd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882660954478-kv8khrm460d06mf125epu3t074at3dqa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEn7iPX3ggqRT8mLRRwShHGDNU5f-3Yo8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882660954478-kv8khrm460d06mf125epu3t074at3dqa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
