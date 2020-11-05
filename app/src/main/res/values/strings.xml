@@ -6,4 +6,12 @@
     <string name="tab1">Chamada</string>
     <string name="tab2">Cadastro</string>
     <string name="tab3">Resumo</string>
+    <string name="nome">nome</string>
+    <string name="requerido">Obrigatório</string>
+    <string name="placeholder_nome">Digite Aqui </string>
+    <string name="hint_label_nome">Nome Completo</string>
+    <string name="titulo_toolbar">IB Jardim das Oliveiras</string>
+    <string name="hint_classe">Classe EBD</string>
+    <string name="button_cadastrar">Matricular</string>
+
 </resources>
