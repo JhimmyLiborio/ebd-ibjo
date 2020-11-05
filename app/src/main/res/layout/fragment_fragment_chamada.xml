@@ -25,8 +25,10 @@
         android:layout_alignParentBottom="true"
 
         app:rippleColor="@android:color/darker_gray"
-        app:backgroundTint="@android:color/holo_blue_bright"
-        android:src="@drawable/round_verified_white_36dp"
+        app:backgroundTint="@color/secondaryColor"
+        android:tint="@android:color/white"
+        android:src="@drawable/ic_done_outline_white_24dp"
+
         tools:ignore="ContentDescription"
         app:fabSize="auto"/>
 

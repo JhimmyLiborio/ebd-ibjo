@@ -12,28 +12,40 @@
         android:id="@+id/appLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:background="@color/primaryDarkColor"
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            app:titleTextColor="@android:color/white"
-            app:title="IB Jardim das Oliveiras"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/titulo_toolbar"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
+            android:background="@color/primaryDarkColor"
             android:textStyle="bold"
-            app:tabIndicatorHeight="3dp"
             app:tabIndicatorAnimationDuration="300"
-            android:background="@color/colorPrimary"
-            app:tabTextColor="@color/secondaryTextColor"
             app:tabIndicatorColor="@android:color/holo_blue_bright"
-            app:tabSelectedTextColor="@android:color/white">
+            app:tabIndicatorHeight="3dp"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="@color/terciarioPrimaryColor">
+
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tabItemChamada"
