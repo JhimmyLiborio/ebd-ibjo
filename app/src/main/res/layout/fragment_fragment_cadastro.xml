@@ -1,19 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layoutFrameCadastro"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#052836"
+    android:windowSoftInputMode="stateUnchanged"
     tools:context=".FragmentCadastro">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center|center_vertical"
-        android:text="CADASTRO"
-        android:layout_gravity="center"
-        android:textSize="30sp" />
 
-</FrameLayout>
+    <LinearLayout
+        android:id="@+id/linearLayoutCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:hint="@string/hint_label_nome"
+            app:boxBackgroundMode="filled"
+            app:boxStrokeColor="@color/secondaryColor"
+
+            app:counterEnabled="true"
+            app:counterMaxLength="80"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:helperText="@string/requerido"
+            app:helperTextEnabled="true"
+            app:placeholderText="@string/placeholder_nome"
+
+            app:hintTextColor="@color/secondaryDarkColor"
+            app:helperTextTextColor="@color/terciarioPrimaryColor"
+            app:counterTextColor="@color/terciarioPrimaryColor"
+
+            app:startIconContentDescription="@string/nome"
+            app:startIconDrawable="@drawable/ic_face_24px">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:elegantTextHeight="true"
+                android:focusable="true"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:textColor="@color/secondaryDarkColor"
+                android:typeface="monospace" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputClasse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+
+            android:hint="@string/hint_classe"
+            app:boxStrokeColor="@color/secondaryColor"
+
+            app:helperText="@string/requerido"
+            app:helperTextEnabled="true"
+
+            app:hintTextColor="@color/secondaryDarkColor"
+            app:helperTextTextColor="@color/terciarioPrimaryColor"
+            app:startIconContentDescription="@string/nome"
+            app:startIconDrawable="@drawable/ic_groups_24px"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:elegantTextHeight="true"
+                android:inputType="none"
+                tools:ignore="LabelFor">
+            </AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonCadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_cadastrar"
+            android:layout_marginTop="32dp"
+            android:layout_gravity="end"
+            app:elevation="5dp"
+            app:icon="@drawable/ic_done_all_24px"
+            style="@style/Widget.MaterialComponents.Button" />
+
+    </LinearLayout>
+
+</ScrollView>
