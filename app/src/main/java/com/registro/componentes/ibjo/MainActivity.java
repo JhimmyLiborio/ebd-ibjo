@@ -20,17 +20,19 @@ public class MainActivity extends AppCompatActivity {
     private TabItem  tabItemCadastro, tabItemChamada, tabItemResumo;
     private ViewPager viewPager;
 
+    private static DatabaseReference alunosBD;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
 
-
         //Recupera uma instancia do Banco de Dados
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
-        DatabaseReference minhaReferencia =  database.getReference("pessoas");
-        Log.d("REFERENCIA BANCO", minhaReferencia.getDatabase().toString());
+        alunosBD =  database.getReference().child("pessoas");
+        Log.d("REFERENCIA BANCO", alunosBD.toString());
+
 
         // referência UI Elementos
         tabLayout = findViewById( R.id.tabLayout );
@@ -77,8 +79,21 @@ public class MainActivity extends AppCompatActivity {
             }
         } );
 
-
+        // Indicador do TabLayout é atualizado quando usa o viewpage: arrastar a tela para os lados
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(
                 tabLayout));
     }
+
+
+    public static DatabaseReference getAlunosBD() {
+        return alunosBD;
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+    }
+
 }
