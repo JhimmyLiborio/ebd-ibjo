@@ -5,7 +5,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.registro.componentes.tablayout_viewpager"
+        applicationId "com.registro.componentes.ibjo"
         minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
