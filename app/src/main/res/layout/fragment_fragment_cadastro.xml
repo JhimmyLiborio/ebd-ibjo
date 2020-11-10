@@ -58,7 +58,7 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputClasse"
+            android:id="@+id/textInputLayoutClasse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -86,7 +86,7 @@
             </AutoCompleteTextView>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonCadastrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -94,8 +94,7 @@
             android:layout_marginTop="32dp"
             android:layout_gravity="end"
             app:elevation="5dp"
-            app:icon="@drawable/ic_done_all_24px"
-            style="@style/Widget.MaterialComponents.Button" />
+            app:icon="@drawable/ic_done_all_24px" />
 
     </LinearLayout>
 
