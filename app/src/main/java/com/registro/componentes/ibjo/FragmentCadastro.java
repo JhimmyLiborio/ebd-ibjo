@@ -11,8 +11,6 @@ import android.widget.AutoCompleteTextView;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.snackbar.BaseTransientBottomBar;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.registro.componentes.ibjo.entidade.Aluno;
@@ -122,16 +120,16 @@ public class FragmentCadastro extends Fragment {
     }
 
 
-    // Não aceita números, caracteres especiais e menos de 8 letras
+    // Nome com letras, acentos, espaço em branco e Mínm 10 e Max 80 caracteres
     private void verificarPadraoPreenchimentoNome(){
 
-        Pattern padrao = Pattern.compile("[^a-zA-Z\\s]",
+        Pattern padrao = Pattern.compile("[^a-zA-Z\\sáàâãéêíóôõúçÁÀÂÃÉÈÍÓÔÕÚÇ]{10,80}",
                 Pattern.CASE_INSENSITIVE);
         Matcher matcher = padrao.matcher(Objects.requireNonNull(textNome.getText()).toString());
 
         if(matcher.find())
             setErroCampo(1,
-                    "Digite o nome completo, utilize letras.", true);
+                    "Não utilize números e caracteres símbolos", true);
 
         if (textNome.getText().toString().length() < 10)
             setErroCampo(1,
