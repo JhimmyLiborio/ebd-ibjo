@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private TabItem  tabItemCadastro, tabItemChamada, tabItemResumo;
     private ViewPager viewPager;
 
-    private static DatabaseReference alunosBD;
+    private static DatabaseReference bdReferencia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         //Recupera uma instancia do Banco de Dados
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
-        alunosBD =  database.getReference().child("pessoas");
-        Log.d("REFERENCIA BANCO", alunosBD.toString());
+        bdReferencia =  database.getReference().child("pessoas");
+        Log.d("REFERENCIA BANCO", bdReferencia.toString());
 
 
         // referência UI Elementos
@@ -85,8 +85,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public static DatabaseReference getAlunosBD() {
-        return alunosBD;
+    public static DatabaseReference getBdReferencia() {
+        return bdReferencia;
     }
 
 

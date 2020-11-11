@@ -15,8 +15,10 @@ import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.registro.componentes.ibjo.entidade.Aluno;
 
 import java.util.Objects;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -149,10 +151,20 @@ public class FragmentCadastro extends Fragment {
 
 
     // cadastrar aluno
-    // TODO: fazer conexao com o banco de dados.
     private void cadastrarAluno(){
-        Snackbar.make(requireView(), "Pronto para cadastrar",
-                BaseTransientBottomBar.LENGTH_LONG).show();
+
+        String id   = MainActivity.getBdReferencia().push().getKey();
+        String nome = Objects.requireNonNull(textNome.getText()).toString();
+        String classe = textClasse.getText().toString();
+        String status = "1";
+        int matricula = new Random().nextInt(9900)+100;
+
+        Aluno aluno = new Aluno(id, matricula, nome, classe, status);
+
+        assert id != null;
+        MainActivity.getBdReferencia().child(id).setValue(aluno);
+        limparCampos();
+
     }
 
     @Override

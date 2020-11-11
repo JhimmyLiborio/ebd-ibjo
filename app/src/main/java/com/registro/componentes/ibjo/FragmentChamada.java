@@ -51,7 +51,7 @@ public class FragmentChamada extends Fragment {
 
 
         // Ler dados da referência e detectar alterações
-        MainActivity.getAlunosBD().addValueEventListener(new ValueEventListener() {
+        MainActivity.getBdReferencia().addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
