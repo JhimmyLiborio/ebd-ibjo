@@ -1,5 +1,6 @@
 package com.registro.componentes.ibjo;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,45 +12,83 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.registro.componentes.ibjo.entidade.Aluno;
 
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+
+import static android.graphics.Color.parseColor;
+import static com.registro.componentes.ibjo.R.drawable.customizado_ripple;
+
 
 public class ListaAlunosAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private final List<Aluno> listaAluno;
-
+    private final Date data;
+    private final DateFormat dataFormatada;
 
     // Construtor da Classe para Determinar a entrada obrigatóra de uma lista
     ListaAlunosAdapter(List<Aluno> lista){
         listaAluno = lista;
+        Calendar calendar = Calendar.getInstance();
+        data = calendar.getTime();
+        dataFormatada = DateFormat.getDateInstance(DateFormat.MEDIUM);
     }
+
 
     // Inflar o Layout de Conteúdo "aluno_item_lista.xml" no Recycler View
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        // Inflar o Layout "aluno_item_lista" dentro do  Recycler View
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.aluno_item_lista,
                 parent, false);
+
         return new ViewHolder(view);
     }
 
 
     // Vincula ou atribue a Fonte de Dados "List<Aluno>" nos Elementos do Layout
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final RecyclerView.ViewHolder holder, final int position) {
 
-        ViewHolder itemHolder = (ViewHolder) holder;
+        final ViewHolder itemHolder = (ViewHolder) holder;
+        final Aluno aluno = listaAluno.get(position);
 
-        itemHolder.textIcon.setText(listaAluno.get(position).getNome().substring(0,1));
-        itemHolder.textNome.setText(listaAluno.get(position).getNome());
-        itemHolder.textData.setText("03 nov.");
-        itemHolder.textClasse.setText(listaAluno.get(position).getClasse());
 
-        // set Color
-        //itemHolder.textNome.setTextColor(Color.WHITE);
-        itemHolder.textClasse.setTextColor( Color.LTGRAY );
-        //itemHolder.textData.setTextColor(Color.LTGRAY);
+        itemHolder.textIcon.setText(aluno.getNome().substring(0,1));
+        itemHolder.textNome.setText(aluno.getNome());
+        itemHolder.textClasse.setText(new StringBuilder("Classe: ").append(aluno.getClasse()));
+        itemHolder.textData.setText(dataFormatada.format(data).substring(0,10));
+
+        //  clique longo na lista
+        itemHolder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+
+            @SuppressLint({"NewApi", "ResourceAsColor"})
+            @Override
+            public boolean onLongClick(View v) {
+
+                aluno.setSelecionado( !aluno.isSelecionado() );
+
+                itemHolder.itemView.setBackgroundColor(Color.parseColor("#E1062E3E"));
+
+                if (aluno.isSelecionado()) {
+                    itemHolder.textIcon.setText("P");
+                    itemHolder.textIcon.getBackground().setTint(Color.parseColor("#64dd17"));
+
+                }else{
+
+                    itemHolder.itemView.setPressed(false);
+                    itemHolder.itemView.setBackgroundResource(customizado_ripple);
+
+                    itemHolder.textIcon.setText(aluno.getNome().substring(0,1));
+                    itemHolder.textIcon.getBackground().setTint(parseColor("#008ecc"));
+                }
+
+                return true;
+            }
+        });
+
     }
 
     // Tamanho da fonte de Dados

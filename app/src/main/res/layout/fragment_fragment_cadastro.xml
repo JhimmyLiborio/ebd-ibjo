@@ -29,15 +29,15 @@
 
             app:counterEnabled="true"
             app:counterMaxLength="80"
+            app:counterTextColor="@color/terciarioPrimaryColor"
             app:endIconMode="clear_text"
             app:errorEnabled="true"
             app:helperText="@string/requerido"
             app:helperTextEnabled="true"
-            app:placeholderText="@string/placeholder_nome"
 
-            app:hintTextColor="@color/secondaryDarkColor"
             app:helperTextTextColor="@color/terciarioPrimaryColor"
-            app:counterTextColor="@color/terciarioPrimaryColor"
+            app:hintTextColor="@color/secondaryDarkColor"
+            app:placeholderText="@string/placeholder_nome"
 
             app:startIconContentDescription="@string/nome"
             app:startIconDrawable="@drawable/ic_face_24px">
@@ -59,23 +59,23 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutClasse"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:layout_marginTop="32dp"
-
             android:hint="@string/hint_classe"
+
             app:boxStrokeColor="@color/secondaryColor"
-
-            app:helperText="@string/requerido"
-            app:helperTextEnabled="true"
-
             app:errorEnabled="true"
 
-            app:hintTextColor="@color/secondaryDarkColor"
+            app:helperText="@string/requerido"
+
+            app:helperTextEnabled="true"
             app:helperTextTextColor="@color/terciarioPrimaryColor"
+            app:hintTextColor="@color/secondaryDarkColor"
             app:startIconContentDescription="@string/nome"
-            app:startIconDrawable="@drawable/ic_groups_24px"
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+            app:startIconDrawable="@drawable/ic_groups_24px">
 
             <AutoCompleteTextView
                 android:id="@+id/autoCompleteDropdownMenu"
@@ -84,17 +84,16 @@
 
                 android:elegantTextHeight="true"
                 android:inputType="none"
-                tools:ignore="LabelFor">
-            </AutoCompleteTextView>
+                tools:ignore="LabelFor"></AutoCompleteTextView>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonCadastrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_cadastrar"
-            android:layout_marginTop="32dp"
             android:layout_gravity="end"
+            android:layout_marginTop="32dp"
+            android:text="@string/button_cadastrar"
             app:elevation="5dp"
             app:icon="@drawable/ic_done_all_24px" />
 

@@ -4,7 +4,8 @@
     android:id="@+id/relativeLista"
     android:layout_width="match_parent"
     android:layout_height="78dp"
-    android:minHeight="78dp">
+    android:minHeight="78dp"
+    android:background="@drawable/customizado_ripple">
 
     <TextView
         android:id="@+id/textIcon"
@@ -13,7 +14,7 @@
         tools:text="F"
         android:textSize="24sp"
         android:textColor="@android:color/white"
-
+        android:typeface="sans"
 
         android:gravity="center"
         android:layout_marginStart="16dp"
@@ -29,12 +30,13 @@
         android:textColor="@android:color/white"
         android:ellipsize="marquee"
         android:singleLine="true"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         android:typeface="monospace"
 
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
         android:layout_toEndOf="@+id/textIcon"
         android:layout_alignTop="@+id/textIcon"
         android:layout_toStartOf="@+id/textData"/>
@@ -47,10 +49,13 @@
         android:singleLine="true"
         android:ellipsize="marquee"
         android:textSize="14sp"
-        android:typeface="monospace"
+        android:typeface="sans"
+        android:fontFamily="sans-serif-medium"
         android:textColor="@android:color/darker_gray"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="14dp"
         android:layout_below="@+id/textNome"
         android:layout_toEndOf="@+id/textIcon"
         android:layout_toStartOf="@+id/textData"/>
@@ -61,8 +66,9 @@
         android:layout_height="wrap_content"
         tools:text="30 nov"
         android:ellipsize="marquee"
-        android:textSize="12sp"
-        android:typeface="monospace"
+        android:textSize="13sp"
+        android:typeface="sans"
+        android:fontFamily="sans-serif-medium"
         android:textColor="@android:color/darker_gray"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
@@ -73,7 +79,6 @@
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="12dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_toEndOf="@+id/textIcon"
@@ -81,6 +86,5 @@
         android:background="?android:attr/listDivider"/>
 
 </RelativeLayout>
-
 
 

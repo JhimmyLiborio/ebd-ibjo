@@ -15,4 +15,8 @@
     <color name="secondaryTextColor">#000000</color>
 
     <color name="terciarioPrimaryColor">#bdbdbd</color>
+
+    <color name="background_app">#052836</color>
+    <color name="divider">#707070</color>
+
 </resources>

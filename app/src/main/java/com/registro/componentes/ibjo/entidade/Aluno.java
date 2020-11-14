@@ -9,6 +9,8 @@ public class Aluno {
     private String nome;
     private String classe;
     private String status;
+    private boolean selecionado = false;
+
 
     // Construtor sem argumentos necessário para o DataFirebase
     public Aluno(){
@@ -43,4 +45,11 @@ public class Aluno {
 
     public  String getPessoaID() { return pessoaID;}
 
+    public boolean isSelecionado() {
+        return selecionado;
+    }
+
+    public void setSelecionado(boolean selecionado) {
+        this.selecionado = selecionado;
+    }
 }
