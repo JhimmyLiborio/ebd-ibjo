@@ -17,6 +17,11 @@
     <color name="terciarioPrimaryColor">#bdbdbd</color>
 
     <color name="background_app">#052836</color>
-    <color name="divider">#707070</color>
+
+    <color name="item_selecionado">#E1062E3E</color>
+
+    <color name="text_icon_item_selecionado">#64dd17</color>
+    <color name="text_icon_padrao">#008ecc</color>
+
 
 </resources>

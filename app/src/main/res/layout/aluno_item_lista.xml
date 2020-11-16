@@ -26,20 +26,24 @@
         android:id="@+id/textNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Joel Jhimmy Ramos Libório"
-        android:textColor="@android:color/white"
+        android:layout_alignTop="@+id/textIcon"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@+id/textData"
+        android:layout_toEndOf="@+id/textIcon"
         android:ellipsize="marquee"
+        android:hapticFeedbackEnabled="false"
+        android:isScrollContainer="false"
+        android:keepScreenOn="false"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:nestedScrollingEnabled="false"
         android:singleLine="true"
+        android:textColor="@android:color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         android:typeface="monospace"
-
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_toEndOf="@+id/textIcon"
-        android:layout_alignTop="@+id/textIcon"
-        android:layout_toStartOf="@+id/textData"/>
+        tools:text="Joel Jhimmy Ramos Libório" />
 
     <TextView
         android:id="@+id/textClasse"
