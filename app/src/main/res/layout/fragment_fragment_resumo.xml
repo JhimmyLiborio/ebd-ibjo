@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layoutFrameResumo"
     android:layout_width="match_parent"
@@ -7,12 +8,56 @@
     android:background="#052836"
     tools:context=".FragmentResumo">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="RESUMO"
-        android:gravity="center_vertical"
-        android:textSize="30sp" />
 
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:state_dragged="true"
+        app:strokeWidth="1dp"
+        app:rippleColor="?attr/colorSurface"
+        app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+        app:cardBackgroundColor="@color/item_selecionado"
+        app:cardForegroundColor="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--- Media -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="194dp"
+                android:layout_gravity="center_horizontal"
+                tools:src="@mipmap/ic_banner_ibjo_foreground"
+                android:background="@color/primaryTextColor"/>
+
+            <!-- Títulos Principais -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:id="@+id/tituloResumo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="@color/primaryTextColor"
+                    android:text="Relatório Ebd"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondaryColor"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:text="28 de Dez 2020"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
 </FrameLayout>
