@@ -3,9 +3,21 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimary">@color/primaryDarkColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">@color/secondaryColor</item>
+
+        <!--  Deve ser verdade, caso contrário o modo de ação não irá sobrepor o toolbar -->
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="actionModeBackground">@color/primaryDarkColor</item>
+
     </style>
 
+    <!-- Toolbar -->
+    <style name="Toolbar" parent="AppTheme">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/primaryDarkColor</item>
+    </style>
 </resources>

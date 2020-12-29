@@ -3,6 +3,9 @@ package com.registro.componentes.ibjo;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
@@ -16,10 +19,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     // inicialização de variáveis
+    //private Toolbar toolbar;
+    private ActionBar actionBar;
+
     private TabLayout tabLayout;
     private TabItem  tabItemCadastro, tabItemChamada, tabItemResumo;
     private ViewPager viewPager;
-
     private static DatabaseReference bdReferencia;
 
     @Override
@@ -33,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         bdReferencia =  database.getReference().child("pessoas");
         Log.d("REFERENCIA BANCO", bdReferencia.toString());
 
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         // referência UI Elementos
         tabLayout = findViewById( R.id.tabLayout );

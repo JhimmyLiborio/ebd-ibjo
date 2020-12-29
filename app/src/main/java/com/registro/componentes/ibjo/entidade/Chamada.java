@@ -4,31 +4,41 @@ import java.util.List;
 
 public class Chamada {
 
-    private String Data;
-    private String status;
-    private List<Aluno> listPessoa;
-
+    private String data;
+    private String idUser;
+    private boolean presente;
 
     Chamada(){
     }
 
 
-    public Chamada(String data, String status, List<Aluno> lista){
-        this.Data = data;
-        this.status = status;
-        this.listPessoa = lista;
+    public Chamada(String data, String keyUser, boolean presenca){
+        this.data = data;
+        this.idUser = keyUser;
+        this.presente = presenca;
     }
 
-
-    private void setData(String data) {
-        Data = data;
+    public String getIdUser() {
+        return idUser;
     }
 
-    private void setStatus(String status) {
-        this.status = status;
+    public void setIdUser(String idUser) {
+        this.idUser = idUser;
     }
 
-    private void setListPessoa(List<Aluno> listPessoa) {
-        this.listPessoa = listPessoa;
+    public boolean isPresente() {
+        return presente;
+    }
+
+    public void setPresente(boolean presente) {
+        this.presente = presente;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 }

@@ -13,25 +13,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/primaryDarkColor"
-        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
+            app:title="@string/app_name"
+            app:titleTextAppearance="@style/Toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="8dp"
-                android:text="@string/titulo_toolbar"
-                android:textColor="@color/primaryTextColor"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-        </androidx.appcompat.widget.Toolbar>
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"/>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"

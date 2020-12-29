@@ -4,12 +4,12 @@ public class Aluno {
 
 
 
-    private String pessoaID;
+    private String key;
     private int  matricula;
     private String nome;
     private String classe;
     private String status;
-    private boolean selecionado = false;
+    private boolean isPresente = false;
 
 
     // Construtor sem argumentos necessário para o DataFirebase
@@ -19,7 +19,7 @@ public class Aluno {
 
     public Aluno(String id, int matricula, String nome, String classe,
                  String status) {
-        this.pessoaID = id;
+        this.key = id;
         this.matricula = matricula;
         this.nome = nome;
         this.classe = classe;
@@ -43,13 +43,13 @@ public class Aluno {
         return status;
     }
 
-    public  String getPessoaID() { return pessoaID;}
+    public  String getKey() { return key;}
 
-    public boolean isSelecionado() {
-        return selecionado;
+    public boolean isPresente() {
+        return isPresente;
     }
 
-    public void setSelecionado(boolean selecionado) {
-        this.selecionado = selecionado;
+    public void setPresente(boolean presente) {
+        this.isPresente = presente;
     }
 }

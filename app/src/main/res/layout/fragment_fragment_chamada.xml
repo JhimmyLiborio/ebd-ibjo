@@ -17,6 +17,7 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btfinalizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -25,9 +26,9 @@
         android:layout_alignParentBottom="true"
 
         app:rippleColor="@android:color/darker_gray"
-        app:backgroundTint="@color/secondaryColor"
-        android:tint="@android:color/white"
-        android:src="@drawable/ic_done_outline_white_24dp"
+        app:backgroundTint="@android:color/white"
+
+        android:src="@drawable/ic_done_outline_black_24dp"
 
         tools:ignore="ContentDescription"
         app:fabSize="auto"/>
