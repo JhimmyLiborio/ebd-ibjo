@@ -54,7 +54,7 @@ public class ListaAlunosAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     private final  SparseBooleanArray indiceValorFinal;
 
-    private final Map<String, Object> folhaDeChamada = new HashMap();
+    private static final Map<String, Chamada> folhaDeChamada = new HashMap();
 
 
     // Construtor, determina as entradas e iniciaçizões necessárias
@@ -98,7 +98,7 @@ public class ListaAlunosAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 aluno.getNome().substring(0,1) );
         itemHolder.textNome.setText( aluno.getNome() );
         itemHolder.textClasse.setText( new StringBuilder("Classe: ").append( aluno.getClasse() ));
-        itemHolder.textData.setText( dataFormatada.format(data).substring(0,10) );
+        itemHolder.textData.setText( dataFormatada.format(data).substring(0,8) );
 
 
 
@@ -250,20 +250,25 @@ public class ListaAlunosAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     // verifica os presentes e os faltantes e adiciona-os à folha de chamada
     private void prepararFolhaDeChamada(boolean isPresente){
 
+        Chamada chamada;
         for (int chave = 0; chave < alunosCadastrados.size(); chave++) {
 
             String idUser = alunosCadastrados.get(chave).getKey();
-
+            chamada = new Chamada();
+            chamada.setIdUser(idUser);
+            chamada.setPresente(isPresente);
             /* mapea na folha de chamada o id do aluno e seu respectivo valor de presença,
                true ou false; true na ação aplicar presença, false na ação  retirar presença
              */
             if (indiceValorSelecaoTmp.get(chave)) {
-                folhaDeChamada.put(idUser, isPresente);
+                folhaDeChamada.put(idUser, chamada); // boolean true
             }
 
             // os que não estão selecionados/presentes são mapeados  na folha de registro com false
-            if (!folhaDeChamada.containsKey(idUser))
-                folhaDeChamada.put(idUser, false);
+            if (!folhaDeChamada.containsKey(idUser)) {
+                chamada.setPresente(false);
+                folhaDeChamada.put(idUser, chamada); // boolean false
+            }
         }
 
         salvarFolhaDeChamada(folhaDeChamada);
@@ -277,7 +282,7 @@ public class ListaAlunosAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     }
 
-    // verificar ainda o bug da lista quando termina finaliza o app no mesmo dia e faz outra chamada
+   /* // verificar ainda o bug da lista quando termina finaliza o app no mesmo dia e faz outra chamada
     private void consultarListaDeChamada(){
         FirebaseDatabase.getInstance()
                 .getReference("chamada").addValueEventListener(new ValueEventListener() {
@@ -296,6 +301,6 @@ public class ListaAlunosAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
             }
         });
-    }
+    }*/
 
 }

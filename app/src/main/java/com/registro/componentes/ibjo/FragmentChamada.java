@@ -76,7 +76,6 @@ public class FragmentChamada extends Fragment  {
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
                     final  Aluno aluno = dataSnapshot.getValue(Aluno.class);
                     listAlunos.add(aluno);
-                    Log.d("CONTADOR", String.valueOf(contador++) );
                 }
                 // Associa os dados ao items correspondentes
                 listAlunosAdapter = new ListaAlunosAdapter(listAlunos, getActivity());
@@ -93,7 +92,10 @@ public class FragmentChamada extends Fragment  {
             }
         });
 
-        Log.d("Tamanho Lista!", String.valueOf(listAlunos.size()));
+    }
 
+
+    public static List< Aluno > getListAlunos() {
+        return listAlunos;
     }
 }
