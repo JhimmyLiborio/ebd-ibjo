@@ -16,11 +16,7 @@ https://user-images.githubusercontent.com/8010163/114277648-046c1d00-99fa-11eb-9
 
 
 # Lista de chamada
-
-![WhatsApp Image 2021-04-10 at 12 53 28 (1)](https://user-images.githubusercontent.com/8010163/114278093-0df68480-99fc-11eb-824d-3e848cfd007a.jpeg)
-
 ![WhatsApp Image 2021-04-10 at 12 42 32](https://user-images.githubusercontent.com/8010163/114277748-8ceabd80-99fa-11eb-9896-a9ce4678ce5b.jpeg)
-
 
 # Presença
 ![WhatsApp Image 2021-04-10 at 12 42 32 (1)](https://user-images.githubusercontent.com/8010163/114277801-c1f71000-99fa-11eb-98de-cf75c13d28fa.jpeg)
