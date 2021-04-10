@@ -19,9 +19,15 @@ https://user-images.githubusercontent.com/8010163/114277648-046c1d00-99fa-11eb-9
 ![WhatsApp Image 2021-04-10 at 12 42 32](https://user-images.githubusercontent.com/8010163/114277748-8ceabd80-99fa-11eb-9896-a9ce4678ce5b.jpeg)
 
 # Presença
+
+https://user-images.githubusercontent.com/8010163/114278305-32069580-99fd-11eb-862c-1eb8cd68550a.mp4
+
+
 ![WhatsApp Image 2021-04-10 at 12 42 32 (1)](https://user-images.githubusercontent.com/8010163/114277801-c1f71000-99fa-11eb-98de-cf75c13d28fa.jpeg)
 
 # Resumo
+  https://user-images.githubusercontent.com/8010163/114278312-38950d00-99fd-11eb-9f66-f42442b2fa1c.mp4
+
 ![WhatsApp Image 2021-04-10 at 12 42 32 (4)](https://user-images.githubusercontent.com/8010163/114277876-1bf7d580-99fb-11eb-8fc2-6c1facb31f5a.jpeg)
 
 # Presentes, Matriculados, Faltantes
