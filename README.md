@@ -1,4 +1,4 @@
-# Escola Bíblica Dominical
+# Aplicativo Escola Bíblica Dominical
 1. Cadastra alunos
 2. Listagem de aluno com multiseleção e actionmode
 3. Filtragem por categoria de classe
