@@ -20,7 +20,7 @@ https://user-images.githubusercontent.com/8010163/114277601-cc64da00-99f9-11eb-8
 
 # Lista
 
-RecyclerView, Long Press, Multi-select, Action Mode, Menu-item, Toolbar
+RecyclerView, Long Press, Multi-select, Action Mode, Menu-item, Toolbar, Tablayout whit ViewPager in Fragment
 
 https://user-images.githubusercontent.com/8010163/114278305-32069580-99fd-11eb-862c-1eb8cd68550a.mp4
 
