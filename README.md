@@ -1,5 +1,5 @@
 # Funções: Aplicativo Escola Bíblica Dominical
-1. Cadastra alunos
+1. Matricula alunos
 2. Listagem de aluno com multiseleção e actionmode
 3. Filtragem por categoria de classe
 4. Aplica presença
@@ -13,7 +13,7 @@
 https://user-images.githubusercontent.com/8010163/114277648-046c1d00-99fa-11eb-9451-66879a38663c.mp4
 
 
-# Validações de Imputs
+# Validações de Inputs
 
 https://user-images.githubusercontent.com/8010163/114277601-cc64da00-99f9-11eb-8a55-9d5dd137ec15.mp4
 
